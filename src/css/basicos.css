@@ -5,6 +5,7 @@ body {
   flex-direction: column;
   color: white;
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 main {
@@ -18,5 +19,11 @@ main {
 
 .header,
 .footer {
-    background-color: darkslateblue;
+  background-color: darkslateblue;
+}
+
+.container {
+  width: 90%;
+  max-width: 1024px;
+  margin: 0 auto;
 }

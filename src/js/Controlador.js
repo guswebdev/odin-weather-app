@@ -1,15 +1,16 @@
 import { modelo } from "./Modelo";
 import { vista } from "./Vista";
+import { submit } from "./Submit";
 
 class Controlador {
-  DOMContentLoaded() {
-    console.log("Hello World");
-  }
-  click(e) {
-    console.log("Eventos Click");
-  }
+  DOMContentLoaded() {}
+  click(e) {}
   submit(e) {
-    console.log("Eventos Submit");
+    e.preventDefault();
+
+    if (e.target === vista.$form) {
+      submit.buscar();
+    }
   }
 }
 

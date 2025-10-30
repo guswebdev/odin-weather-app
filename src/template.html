@@ -3,14 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Template Webpack</title>
+    <title>App Clima</title>
   </head>
   <body>
     <header class="header">
-      <h1>Template Webpack</h1>
+      <h1>App Clima</h1>
     </header>
     <main>
-      <h2>Content Main</h2>
+      <div class="container">
+        <header class="main-header">
+          <form action="" class="form">
+            <input
+              type="search"
+              name="buscador"
+              id="buscador"
+              placeholder="Ingrese una ciudad"
+              autocomplete="off"
+            />
+            <button type="submit">Buscar</button>
+          </form>
+        </header>
+        <section class="main-body" data-container="mainBody">
+          <h2>INFORMACION DEL CLIMA</h2>
+        </section>
+      </div>
     </main>
     <footer class="footer">
       <h3>Hecho por Gustavo Miño</h3>
