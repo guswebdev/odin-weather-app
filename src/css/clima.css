@@ -6,13 +6,15 @@ main .container {
 }
 
 .main-header {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .form {
-  width: 250px;
+  width: 100%;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -21,26 +23,185 @@ main .container {
 .form input {
   padding: 0.5rem;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.125rem;
 }
 
 .form button {
-  background-color: darkslateblue;
+  width: max-content;
+  background-color: #444;
   color: var(--color-blanco);
-  padding: 0.5rem 0;
+  padding: 0.5rem 1rem;
   font-weight: bold;
   font-size: 1.15rem;
   border-radius: 5px;
   border: none;
   border: solid medium transparent;
   cursor: pointer;
+  align-self: center;
 }
 
 .form button:hover {
-  color: darkslateblue;
+  color: #444;
   background-color: var(--color-blanco);
-  border: solid medium darkslateblue;
+  border: solid medium #444;
+}
+
+.main-divisor {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 600px;
+  border-color: #444;
 }
 
 .main-body {
   flex: 1;
+}
+
+.body-card {
+  max-width: 600px;
+  height: 100%;
+  margin: 0 auto;
+  background-color: #444;
+  color: var(--color-blanco);
+  border-radius: 5px;
+  box-shadow: 8px 5px 5px 0px #5a5a5a;
+}
+
+.card-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header-lugar {
+  text-align: left;
+}
+
+.card-header-fecha {
+  flex-shrink: 0;
+  font-size: 1.15rem;
+}
+
+.card-header-fecha h4 {
+  font-weight: normal;
+}
+
+.card-body {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "info info info"
+    "info info info"
+    "min max st"
+    "precip humedad viento";
+  gap: 1.5rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-body > * {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem 0.5rem;
+}
+
+.card-body-informacion {
+  grid-area: info;
+  padding: 0;
+  gap: 1rem;
+}
+
+.card-body-informacion i {
+  font-size: 5rem;
+}
+.card-body-min {
+  grid-area: min;
+  padding: 0;
+}
+.card-body-max {
+  grid-area: max;
+  padding: 0;
+}
+.card-body-sensacion {
+  grid-area: st;
+  padding: 0;
+}
+.card-body-precipitacion {
+  height: 100%;
+  justify-content: center;
+  background-color: #373636;
+  border-radius: 5px;
+  grid-area: precip;
+}
+.card-body-humedad {
+  height: 100%;
+  justify-content: center;
+  background-color: #373636;
+  border-radius: 5px;
+  grid-area: humedad;
+}
+.card-body-viento {
+  height: 100%;
+  justify-content: center;
+  background-color: #373636;
+  border-radius: 5px;
+  grid-area: viento;
+}
+
+.card-body-min span,
+.card-body-max span,
+.card-body-sensacion span,
+.card-body-precipitacion span,
+.card-body-humedad span,
+.card-body-viento span {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+.card-body-min div,
+.card-body-max div,
+.card-body-sensacion div,
+.card-body-precipitacion div,
+.card-body-humedad div,
+.card-body-viento div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: .25rem;
+}
+.card-body-precipitacion div,
+.card-body-humedad div,
+.card-body-viento div {
+  align-items: center;
+}
+
+.informacion {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.informacion p {
+  font-size: 3rem;
+}
+
+.informacion-grados {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.informacion-grados button {
+  background-color: #444;
+  color: gray;
+  font-size: 1.125rem;
+  border: none;
+}
+.informacion-grados button.active {
+  color: var(--color-blanco);
+  font-weight: bold;
 }

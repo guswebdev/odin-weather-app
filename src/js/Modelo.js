@@ -22,12 +22,11 @@ class Modelo {
       const dataApp = {
         ciudad: `${data.resolvedAddress}`,
         fecha: `${data.days[0].datetime}`,
+        temp: `${data.days[0].temp}`,
         tempMax: `${data.days[0].tempmax}`,
         tempMin: `${data.days[0].tempmin}`,
         sensTermica: `${data.days[0].feelslike}`,
         humedad: `${data.days[0].humidity}`,
-        visibilidad: `${data.days[0].visibility}`,
-        precipitaciones: `${data.days[0].precip}`,
         probPrecipitaciones: `${data.days[0].precipprob}`,
         velViento: `${data.days[0].windspeed}`,
         condicion: `${data.days[0].conditions}`,

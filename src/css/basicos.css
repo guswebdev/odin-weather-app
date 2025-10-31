@@ -9,17 +9,19 @@ body {
 }
 
 main {
+  padding: 1rem 0; 
   flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: darkslateblue;
-  /*background-color: darkgoldenrod;*/
+  color: #444;
+  background: linear-gradient(120deg,#6c6c6c,#e6e6e6);
 }
 
 .header,
 .footer {
-  background-color: darkslateblue;
+  background-color: #444;
+  padding: .5rem 0;
 }
 
 .container {

@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>App Clima</title>
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- FONT AWESOME -->
   </head>
   <body>
     <header class="header">
@@ -23,13 +32,149 @@
             <button type="submit">Buscar</button>
           </form>
         </header>
+        <hr class="main-divisor" />
         <section class="main-body" data-container="mainBody">
-          <h2>INFORMACION DEL CLIMA</h2>
+          <article class="body-card">
+            <div class="card-header">
+              <div class="card-header-lugar">
+                <h3>Buenos Aires, Argentina</h3>
+              </div>
+              <div class="card-header-fecha">
+                <h4>31-10-2025</h4>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="card-body-informacion">
+                <div class="informacion">
+                  <p>63.2</p>
+                  <div class="informacion-grados">
+                    <button class="active">°C</button>
+                    <span>|</span>
+                    <button>°F</button>
+                  </div>
+                </div>
+                <span>
+                  <i class="fa-solid fa-cloud-rain"></i>
+                </span>
+                <p>Rain, Partially cloudy</p>
+              </div>
+              <div class="card-body-min">
+                <div>
+                  <span>54.9</span>
+                  <small>°</small>
+                </div>
+                <p>Temp. minima</p>
+              </div>
+              <div class="card-body-max">
+                <div>
+                  <span>70.2</span>
+                  <small>°</small>
+                </div>
+                <p>Temp. maxima</p>
+              </div>
+              <div class="card-body-sensacion">
+                <div>
+                  <span>63.2</span>
+                  <small>°</small>
+                </div>
+                <p>Sens. Termica</p>
+              </div>
+              <div class="card-body-precipitacion">
+                <div>
+                  <span>0</span>
+                  <small>%</small>
+                </div>
+                <p>Precip.</p>
+              </div>
+              <div class="card-body-humedad">
+                <div>
+                  <span>65.3</span>
+                  <small>%</small>
+                </div>
+                <p>Humedad</p>
+              </div>
+              <div class="card-body-viento">
+                <div>
+                  <span>12.3</span>
+                  <small>Km/h</small>
+                </div>
+                <p>Viento</p>
+              </div>
+            </div>
+          </article>
         </section>
       </div>
     </main>
     <footer class="footer">
       <h3>Hecho por Gustavo Miño</h3>
     </footer>
+    <template id="template-info">
+      <article class="body-card">
+        <div class="card-header">
+          <div class="card-header-lugar">
+            <h3 data-info="ciudad">Buenos Aires, Argentina</h3>
+          </div>
+          <div class="card-header-fecha">
+            <h4 data-info="fecha">31-10-2025</h4>
+          </div>
+        </div>
+        <div class="card-body">
+          <div class="card-body-informacion">
+            <div class="informacion">
+              <p data-info="temp">63.2</p>
+              <div class="informacion-grados">
+                <button>°C</button>
+                <span>|</span>
+                <button>°F</button>
+              </div>
+            </div>
+            <h2 data-info="icon">ICON</h2>
+            <p data-info="condicion">Clear</p>
+          </div>
+          <div class="card-body-min">
+            <p>
+              <span data-info="min">54.9</span>
+              <span>°</span>
+            </p>
+            <p>min</p>
+          </div>
+          <div class="card-body-max">
+            <p>
+              <span data-info="max">70.2</span>
+              <span>°</span>
+            </p>
+            <p>max</p>
+          </div>
+          <div class="card-body-sensacion">
+            <p>
+              <span data-info="sensacion">63.2</span>
+              <span>°</span>
+            </p>
+            <p>sTermica</p>
+          </div>
+          <div class="card-body-precipitacion">
+            <p>
+              <span data-info="precipitaciones">0</span>
+              <span>%</span>
+            </p>
+            <p>precip</p>
+          </div>
+          <div class="card-body-humedad">
+            <p>
+              <span data-info="humedad">65.3</span>
+              <span>%</span>
+            </p>
+            <p>humedad</p>
+          </div>
+          <div class="card-body-viento">
+            <p>
+              <span data-info="viento">12.3</span>
+              <span>Km/h</span>
+            </p>
+            <p>viento</p>
+          </div>
+        </div>
+      </article>
+    </template>
   </body>
 </html>
