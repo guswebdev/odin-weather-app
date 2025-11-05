@@ -21,6 +21,9 @@
     <main>
       <div class="container">
         <header class="main-header">
+          <div id="loader" class="loader">
+            <img src="assets/img/tenor.gif" alt="Cargando..." />
+          </div>
           <form action="" class="form">
             <input
               type="search"
@@ -33,81 +36,13 @@
           </form>
         </header>
         <hr class="main-divisor" />
-        <section class="main-body" data-container="mainBody">
-          <article class="body-card">
-            <div class="card-header">
-              <div class="card-header-lugar">
-                <h3>Buenos Aires, Argentina</h3>
-              </div>
-              <div class="card-header-fecha">
-                <h4>31-10-2025</h4>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="card-body-informacion">
-                <div class="informacion">
-                  <p>63.2</p>
-                  <div class="informacion-grados">
-                    <button class="active">°C</button>
-                    <span>|</span>
-                    <button>°F</button>
-                  </div>
-                </div>
-                <span>
-                  <i class="fa-solid fa-cloud-rain"></i>
-                </span>
-                <p>Rain, Partially cloudy</p>
-              </div>
-              <div class="card-body-min">
-                <div>
-                  <span>54.9</span>
-                  <small>°</small>
-                </div>
-                <p>Temp. minima</p>
-              </div>
-              <div class="card-body-max">
-                <div>
-                  <span>70.2</span>
-                  <small>°</small>
-                </div>
-                <p>Temp. maxima</p>
-              </div>
-              <div class="card-body-sensacion">
-                <div>
-                  <span>63.2</span>
-                  <small>°</small>
-                </div>
-                <p>Sens. Termica</p>
-              </div>
-              <div class="card-body-precipitacion">
-                <div>
-                  <span>0</span>
-                  <small>%</small>
-                </div>
-                <p>Precip.</p>
-              </div>
-              <div class="card-body-humedad">
-                <div>
-                  <span>65.3</span>
-                  <small>%</small>
-                </div>
-                <p>Humedad</p>
-              </div>
-              <div class="card-body-viento">
-                <div>
-                  <span>12.3</span>
-                  <small>Km/h</small>
-                </div>
-                <p>Viento</p>
-              </div>
-            </div>
-          </article>
-        </section>
+        <section class="main-body" data-container="mainBody"></section>
       </div>
     </main>
     <footer class="footer">
       <h3>Hecho por Gustavo Miño</h3>
     </footer>
+    <!-- TEMPLATE BODY-CARD-->
     <template id="template-info">
       <article class="body-card">
         <div class="card-header">
@@ -123,58 +58,59 @@
             <div class="informacion">
               <p data-info="temp">63.2</p>
               <div class="informacion-grados">
-                <button>°C</button>
-                <span>|</span>
-                <button>°F</button>
+                <p>°C</p>
               </div>
             </div>
-            <h2 data-info="icon">ICON</h2>
+            <div>
+              <img data-info="icon" />
+            </div>
             <p data-info="condicion">Clear</p>
           </div>
           <div class="card-body-min">
-            <p>
+            <div>
               <span data-info="min">54.9</span>
-              <span>°</span>
-            </p>
-            <p>min</p>
+              <small>°</small>
+            </div>
+            <p>Temp. minima</p>
           </div>
           <div class="card-body-max">
-            <p>
+            <div>
               <span data-info="max">70.2</span>
-              <span>°</span>
-            </p>
-            <p>max</p>
+              <small>°</small>
+            </div>
+            <p>Temp. maxima</p>
           </div>
           <div class="card-body-sensacion">
-            <p>
+            <div>
               <span data-info="sensacion">63.2</span>
-              <span>°</span>
-            </p>
-            <p>sTermica</p>
+              <small>°</small>
+            </div>
+            <p>Sens. Termica</p>
           </div>
           <div class="card-body-precipitacion">
-            <p>
+            <div>
               <span data-info="precipitaciones">0</span>
               <span>%</span>
-            </p>
-            <p>precip</p>
+            </div>
+            <p>Precip.</p>
           </div>
           <div class="card-body-humedad">
-            <p>
+            <div>
               <span data-info="humedad">65.3</span>
-              <span>%</span>
-            </p>
-            <p>humedad</p>
+              <small>%</small>
+            </div>
+            <p>Humedad</p>
           </div>
           <div class="card-body-viento">
-            <p>
+            <div>
               <span data-info="viento">12.3</span>
-              <span>Km/h</span>
-            </p>
-            <p>viento</p>
+              <small>Km/h</small>
+            </div>
+            <p>Viento</p>
           </div>
         </div>
       </article>
     </template>
+    <!-- TEMPLATE BODY-CARD-->
   </body>
 </html>

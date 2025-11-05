@@ -3,7 +3,7 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: var(--color-letra-principal);
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -14,13 +14,12 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #444;
-  background: linear-gradient(120deg,#6c6c6c,#e6e6e6);
+  background: linear-gradient(120deg,var(--color-principal),#e6e6e6);
 }
 
 .header,
 .footer {
-  background-color: #444;
+  background-color: var(--color-principal);
   padding: .5rem 0;
 }
 

@@ -1,6 +1,24 @@
 :root {
   --color-blanco: #fff;
   --color-negro: #222;
+  /*
+  --color-gris-inicial: #444;
+  --color-gris-inicial-dark: #373636;
+  */
+  --color-naranja: #f89e1d;
+  --color-naranja-dark: #d4810d;
+  --color-amarillo: #f7dd66;
+  --color-amarillo-dark: #c9af3e;
+  --color-celeste: #aae2fa;
+  --color-celeste-dark: #5e9bb6;
+  --color-azul: #42c8f4;
+  --color-azul-dark: #29aad4;
+  --color-inicial: #444;
+  --color-inicial-dark: #373636;
+  --color-principal: var(--color-inicial);
+  --color-principal-dark: var(--color-inicial-dark);
+
+  --color-letra-principal: var(--color-blanco);
 }
 
 *,
@@ -26,5 +44,5 @@ img {
 }
 
 button {
-    display: inline-block;
+  display: inline-block;
 }

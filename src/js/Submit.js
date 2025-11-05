@@ -3,13 +3,17 @@ import { vista } from "./Vista";
 
 class Submit {
   async buscar() {
-    //console.log(vista.$inputBuscador.value);
+    vista.mostrarLoader()
+    vista.ocultarForm()
+    
     modelo.establecerCiudad(vista.$inputBuscador.value);
-    //console.log(modelo.ciudad);
-    //await modelo.consultarDatos();
-    //vista.mostrarDatosDom();
-    //vista.limpiarRenderInfo()
-    //vista.renderInfo()
+    await modelo.consultarDatos();
+    
+    vista.ocultarLoader()
+    vista.mostrarForm()
+    
+    vista.limpiarRenderInfo();
+    vista.renderInfo();
   }
 }
 

@@ -1,10 +1,18 @@
-import { modelo } from "./Modelo";
 import { vista } from "./Vista";
 import { submit } from "./Submit";
 
 class Controlador {
-  DOMContentLoaded() {}
-  click(e) {}
+  domContentLoaded(){
+    //vista.cargarImagen("clear-day.png")
+
+    /*
+    Me falta completar bien lo de los iconos
+    Tambien me gustaria traducir textos
+    Acomodar las fechas y tal vez los nombre de lugares
+    Validar el Formulario
+    Mejorar los estilos de los temas
+    */
+  }
   submit(e) {
     e.preventDefault();
 
@@ -15,9 +23,7 @@ class Controlador {
 }
 
 const controlador = new Controlador();
-
-document.addEventListener("DOMContentLoaded", controlador.DOMContentLoaded);
-document.addEventListener("click", controlador.click);
+document.addEventListener("DOMContentLoaded", controlador.domContentLoaded);
 document.addEventListener("submit", controlador.submit);
 
 export { controlador };
